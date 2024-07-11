@@ -24,11 +24,11 @@ jobs:
     name: Build and Deploy
     needs: upload-package-lock-json
     uses: elrayle/operations/.github/workflows/app-build-and-deploy.yml@main
-    secrets: 
-      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
-      AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_DEV }}
-      DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-      PRODUCTION_DEPLOYERS: ${{ secrets.PRODUCTION_DEPLOYERS }}
+    # secrets: 
+    #   AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+    #   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_DEV }}
+    #   DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+    #   PRODUCTION_DEPLOYERS: ${{ secrets.PRODUCTION_DEPLOYERS }}
     with:
       deploy-env: dev
       application-type: api
